@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First REST Request from Mockaroo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>First REST Request from Mockaroo</h1>
+    <form id="ageForm" action="index.html" method="post">
+        <label for="minAge">Min Age</label>
+        <input type="number" name="minAge"><br><br>
+
+        <label for="maxAge">Max Age</label>
+        <input type="number" name="maxAge">
+
+        <!-- <label for="gender">Select a gender</label>
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select> -->
+        <br>
+        <br>
+        <label for="country">Select Countries:</label><br>
+        <input type="checkbox" name="country" value="newZealand">New Zealand<br>
+        <input type="checkbox" name="country" value="australia">Australia<br>
+        <input type="checkbox" name="country" value="germany">Germany<br>
+        <input type="checkbox" name="country" value="france">France<br>
+        <input type="checkbox" name="country" value="italy">Italy<br>
+        <input type="checkbox" name="country" value="russia">Russia<br>
+        <input type="checkbox" name="country" value="japan">Japan<br>
+        <input type="checkbox" name="country" value="china">China<br>
+
+
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
