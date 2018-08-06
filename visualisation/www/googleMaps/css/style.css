@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: helvetica;
+}
+
+#wrap{
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+    /* background-color: pink; */
+    padding: 1em;
+    /* outline: black solid; */
+}
+
+h1{
+    width: 100%;
+    padding: 2.5em;
+    text-align: center;
+}
+
+#map{
+    width: 70%;
+    height: 100%;
+}
+
+#places{
+    width: 20%;
+    /* outline: 1px pink solid; */
+}
+
+.flexme{
+    display: flex;
+}
+
+.flexChildren{
+    flex:1;
+}
+
+.place{
+    padding: 2em;
+    border-bottom: 1px grey solid;
+}
+
+.placeName{
+    padding-bottom: 0.5em;
+}

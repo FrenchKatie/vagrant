@@ -1,0 +1,52 @@
+[
+    {
+        "placeName": "Auckland",
+        "lat": -36.848460,
+        "lng":174.763332
+    },
+    {
+        "placeName": "Wellington",
+        "lat": -41.286460,
+        "lng":174.776236
+    },
+    {
+        "placeName": "Christchurch",
+        "lat": -43.532054,
+        "lng":172.636225
+    },
+    {
+        "placeName": "Hamilton",
+        "lat": 39.399501,
+        "lng":-84.561335
+    },
+    {
+        "placeName": "Tauranga",
+        "lat": -37.687797,
+        "lng":176.165130
+    },
+    {
+        "placeName": "Napier",
+        "lat": -39.492844,
+        "lng":176.912018
+    },
+    {
+        "placeName": "Dunedin",
+        "lat": -45.878760,
+        "lng":170.502798
+    },
+    {
+        "placeName": "Palmerston North",
+        "lat": -40.352306,
+        "lng":175.608215
+    },
+    {
+        "placeName": "New Plymouth",
+        "lat": -39.055625,
+        "lng":174.075228
+    },
+    {
+        "placeName": "Nelson",
+        "lat": -41.270632,
+        "lng":173.283965
+    }
+]
