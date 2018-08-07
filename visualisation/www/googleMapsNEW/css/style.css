@@ -20,3 +20,15 @@
     outline: 1px solid blue;
     flex:1;
 }
+.typeWalk{
+    color:red;
+}
+.typeActivity{
+    color: blue;
+}
+.typeCafe{
+    color:green;
+}
+.typeRetail{
+    color:orange
+}
