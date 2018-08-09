@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Maps Directions API</title>
+    <style media="screen">
+        body{
+            font-family: helvetica;
+        }
+        #mapCanvas{
+            width: 70%;
+            height: 1000px;
+            outline: 1px pink solid;
+            float: left;
+        }
+        form{
+            float: left;
+            width: 30%
+        }
+        label{
+            text-align: center;
+            width: 100%;
+            /* margin-bottom: 2em; */
+            font-size: 2em;
+            margin-left: 1em;
+            color: #a4b0be;
+        }
+        .userInput{
+            border: none;
+            border-bottom: 1px solid grey;
+            margin-bottom: 2em;
+            margin-top: 1em;
+            font-size: 2em;
+            margin-left: 1em;
+        }
+        .userInput:focus{
+            outline: none;
+        }
+        #submitbtn{
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            font-size: 2em;
+            margin-left: 1em;
+            padding: 1em 3.5em;
+        }
+    </style>
+</head>
+<body onload="initialize()">
+    <h1>Google Maps Directions API</h1>
+    <div id="mapCanvas"></div>
+    <form class="" action="index.html" method="post">
+        <label for="start">Start</label><br>
+        <input type="text" name="start" class="userInput" id="startInput"><br>
+
+        <label for="waypoint">Waypoint</label><br>
+        <input type="text" name="waypoint" class="userInput" id="waypointInput"><br>
+
+        <label for="end">End</label><br>
+        <input type="text" name="end" class="userInput" id="endInput"><br>
+
+        <input type="submit" name="" value="Submit" id="submitbtn">
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY-p0m6yeY86DUsOGs8xT25V2ATkCEq_Y"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

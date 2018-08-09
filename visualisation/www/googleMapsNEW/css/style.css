@@ -12,13 +12,13 @@
     display: flex;
 }
 #map{
-    height: 90vh;
+    height: 95vh;
     flex:4;
-    outline: 1px solid pink;
+    /* outline: 1px solid pink; */
 }
 #places{
-    outline: 1px solid blue;
-    flex:1;
+    /* outline: 1px solid blue; */
+
 }
 .typeWalk{
     color:red;
@@ -31,4 +31,23 @@
 }
 .typeRetail{
     color:orange
+}
+#rightbox{
+    flex:1;
+    padding: 2em;
+    height: 95vh;
+    overflow: scroll;
+}
+h2{
+    padding-bottom: 1em;
+}
+form{
+    padding-bottom: 2em;
+}
+form select{
+    width: 100%;
+}
+#travelModeSbmt{
+    width: 100%;
+    margin-top: 1em;
 }

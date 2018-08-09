@@ -1,14 +1,36 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Google Charts: Gauge Chart</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <h1>Google Charts: Gauge Chart</h1>
-        <div id="chartContainer"></div>
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="js/script.js"></script>
-    </body>
+<html>
+ <head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['gauge']});
+    google.charts.setOnLoadCallback(drawGauge);
+    var gaugeOptions = {min: 0, max: 280, yellowFrom: 200, yellowTo: 250,
+      redFrom: 250, redTo: 280, minorTicks: 5};
+    var gauge;
+    function drawGauge() {
+      gaugeData = new google.visualization.DataTable();
+      gaugeData.addColumn('number', 'Engine');
+      gaugeData.addColumn('number', 'Torpedo');
+      gaugeData.addRows(2);
+      gaugeData.setCell(0, 0, 120);
+      gaugeData.setCell(0, 1, 80);
+      gauge = new google.visualization.Gauge(document.getElementById('gauge_div'));
+      gauge.draw(gaugeData, gaugeOptions);
+    }
+    function changeTemp(dir) {
+      var x=document.getElementById("engine").value;
+      var y=document.getElementById("torpedo").value;
+      gaugeData.setValue(0, 0, x);
+      gaugeData.setValue(0, 1, y);
+      gauge.draw(gaugeData, gaugeOptions);
+    }
+  </script>
+ </head>
+ <body>
+  <div id="gauge_div" style="width:280px; height: 140px;"></div><br/> <br/> <br/>
+ Enter a value for Engine here: <input type="text" name="engine" id="engine"  /> <br/> <br/> <br/>
+ Enter a value for Torpedo here: <input type="text" name="torpedo" id="torpedo"  /><br/> <br/> <br/>
+  <input type="button" value="Change values" onclick="changeTemp()" />
+
+ </body>
 </html>
