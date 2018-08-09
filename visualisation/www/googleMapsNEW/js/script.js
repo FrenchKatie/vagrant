@@ -83,10 +83,10 @@ $(document).on('click', '.place', function(){
             //move map to the correct marker and zoom in
             map.panTo(allMarkers[i].position);
             map.setZoom(14);
-            calcRoute (allMarkers[i])
+            calcRoute (allMarkers[i]);
+            findPlaceInfo(allMarkers[i].title);
         }// end of if statement
     } //end of for loop
-
 });
 
 
@@ -111,4 +111,31 @@ function calcRoute (data){
             var route = response.routes[0];
         }
     })
+}
+
+var service;
+function findPlaceInfo(placeName){
+    console.log(placeName);
+    var request = {
+        query: placeName + " Wellington New Zealand", //what we're searching for? Esseentially searching through google
+        fields: ["id" , "name" , "photos" , "formatted_address" , "rating" , "opening_hours"]
+    };
+    service = new google.maps.places.PlacesService(map);
+    service.findPlaceFromQuery(request , getPlaces);
+}
+
+function getPlaces(results , status){
+    console.log(status);
+    if (status == "OK") {
+        for (var i = 0; i < results.length; i++) {
+            console.log(results[i]);
+            var photos = results[i].photos;
+            console.log(photos[0].getUrl({
+                "maxWidth": 300,
+                "maxHeight": 300
+            }));
+        } //end of for loop
+    } else{
+        console.log("something went wrong with getting the places");
+    } //end of else
 }
