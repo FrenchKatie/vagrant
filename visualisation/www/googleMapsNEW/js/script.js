@@ -1,6 +1,7 @@
 //when window is loaded call init map function
 google.maps.event.addDomListener(window, "load" , initmap);
 
+//map variables
 var map;
 var infoBox;
 var marker;
@@ -12,6 +13,8 @@ var home = {
     lat: -41.279222,
     lng: 174.780389
 }
+//place variables
+var service;
 
 
 function initmap () {
@@ -113,7 +116,6 @@ function calcRoute (data){
     })
 }
 
-var service;
 function findPlaceInfo(placeName){
     console.log(placeName);
     var request = {

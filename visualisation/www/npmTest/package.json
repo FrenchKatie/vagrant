@@ -1,0 +1,22 @@
+{
+  "name": "npmtest",
+  "version": "0.0.1",
+  "description": "a project that shows off npm",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "package",
+    "manager"
+  ],
+  "author": "Katie French",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.4"
+  }
+}
