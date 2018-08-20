@@ -1,0 +1,11 @@
+{
+  "name": "nodeserver",
+  "version": "0.0.1",
+  "description": "Introduction to node servers",
+  "main": "index.js",
+  "scripts": {
+    "dev:server" : "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
