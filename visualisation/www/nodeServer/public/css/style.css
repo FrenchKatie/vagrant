@@ -4,4 +4,15 @@ body{
     font-size: 3em;
     color: #f5cd79;
     padding-top: 2em;
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 0.5em;
 }

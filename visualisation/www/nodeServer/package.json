@@ -4,7 +4,7 @@
   "description": "Introduction to node servers",
   "main": "index.js",
   "scripts": {
-    "dev:server" : "nodemon index.js"
+    "dev:server" : "nodemon -L index.js"
   },
   "author": "",
   "license": "ISC"
