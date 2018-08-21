@@ -1,0 +1,11 @@
+{
+  "name": "shoppingapp",
+  "version": "0.0.1",
+  "description": "A shopping list for groceries using node.js and servers",
+  "main": "index.js",
+  "scripts": {
+    "dev:server": "nodemon -L index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

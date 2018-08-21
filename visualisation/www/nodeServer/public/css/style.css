@@ -16,3 +16,32 @@ a{
     color: black;
     font-size: 0.5em;
 }
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+input{
+    width: 50vw;
+    padding: 1em;
+}
+
+.labelTxt{
+    color: black;
+    font-size: 0.4em;
+    text-align: left;
+    width: 100%;
+}
+
+.product{
+    border: 1px #f5cd79 solid;
+}
+
+.flexMe{
+    display: flex;
+}
+
+.flexChildren{
+    flex: 1
+}
