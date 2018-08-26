@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form class="" onsubmit="validate();">
+        <label for="">Phone number:</label><br>
+        <input type="text" id="phone-number"><br><br>
+        <label for="">Postal code:</label><br>
+        <input type="text" id="postal-code"><br><br>
+        <input type="submit" name="" value="Submit"><br><br>
+    </form> -->
+
+    <form class="" onsubmit="return checkForm(this);">
+        <label for="">Username:</label><br>
+        <input type="text" name="username"><br><br>
+        <label for="">Password:</label><br>
+        <input type="text" name="pwd1"><br><br>
+        <label for="">Confirm password:</label><br>
+        <input type="text" name="pwd2"><br><br>
+        <input type="submit" name="" value="Submit"><br><br>
+    </form>
+
+    <script type="text/javascript">
+
+    function checkForm(form)
+{//checking for username presence
+if(form.username.value == "") {
+  alert("Error: Username cannot be blank!");
+  form.username.focus();
+  return false;
+}
+re = /^\w+$/; //creating the pattern of word
+if(!re.test(form.username.value)) { //error reporting if contains non-word character
+  alert("Error: Username must contain only letters, numbers and underscores!");
+  form.username.focus();
+  return false;
+}
+//checking if password is present and equal to the confirm password value
+if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+  if(form.pwd1.value.length < 6) {
+    alert("Error: Password must contain at least six characters!");
+    form.pwd1.focus();
+    return false;
+  }
+  //error reporting if username is same as the password
+  if(form.pwd1.value == form.username.value) {
+    alert("Error: Password must be different from Username!");
+    form.pwd1.focus();
+    return false;
+  }
+  re = /[0-9]/; //creating numeric pattern then checking if passwrd has atleast 1 numeric value
+  if(!re.test(form.pwd1.value)) {
+    alert("Error: password must contain at least one number (0-9)!");
+    form.pwd1.focus();
+    return false;
+  }
+  re = /[a-z]/; //creating alphabet pattern of lowercase and reporting if password does not contain lowercase characters
+  if(!re.test(form.pwd1.value)) {
+    alert("Error: password must contain at least one lowercase letter (a-z)!");
+    form.pwd1.focus();
+    return false;
+  }
+  re = /[A-Z]/; //creating alphabet pattern of uppercase and reporting if password does not contain upppercase characters
+  if(!re.test(form.pwd1.value)) {
+    alert("Error: password must contain at least one uppercase letter (A-Z)!");
+    form.pwd1.focus();
+    return false;
+  }
+} else { //if password not given or not confirmed hen report error
+  alert("Error: Please check that you've entered and confirmed your password!");
+  form.pwd1.focus();
+  return false;
+}
+alert("You entered a valid password: " + form.pwd1.value); //do not show password in real projects for security reasons.
+return true;
+}
+
+        // function validate() {
+        //     var phoneNumber = document.getElementById("phone-number").value;
+        //     var phoneRGEX = /^[+]{0,1}[61]{0,1}[-\s\.]{0,1}[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+        //     //+61 09 452 5639
+        //     //+61 (09) 452 5639
+        //     // var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+        //     //The regular expression above will approve a mixture of the following phone numbers below:
+        //         //541-741-3010
+        //         //(541) 741 3010
+        //         //541.741.3010
+        //         //5417413010
+        //
+        //
+        //     var postCode = document.getElementById("postal-code").value;
+        //     var postRGEX = /^[A-Z]{1,2}[0-9]{1,2} ?[0-9][A-Z]{2}$/i;
+        //     var postResult = postRGEX.test(postCode);
+        //
+        //
+        //     var phoneResult = phoneRGEX.test(phoneNumber);
+        //     if (phoneResult ==false) {
+        //         alert("Please enter a valid phone number!");
+        //         return false;
+        //     }else if (postResult == false) {
+        //         alert("Please end a valid postal code!");
+        //         return false;
+        //     }else {
+        //         alert("Your information is correct!");
+        //         return true;
+        //     }
+        //
+        //
+        // } //end of validate fntn
+    </script>
+</body>
+</html>
