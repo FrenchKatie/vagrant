@@ -3,11 +3,9 @@ const express = require("express");
 const router = express.Router(); //expects routes, different urls (best used in a product/ scenario)
 
 router.get("/" , function (req, res){
-    res.end("this is coming from the home route");
-});
-
-router.get("/home" , function (req, res){
-    res.end("this is coming from the home route");
+    res.render("home/index" , {
+        title: "Home Page"
+    }); //what file do u want it to render
 });
 
 module.exports = router;

@@ -1,5 +1,6 @@
 const express = require("express");
-
+const exphbs = require("express-handlebars");
+const path = require("path");
 var app = express();
 
 const router = express.Router();
@@ -7,9 +8,13 @@ const router = express.Router();
 const home = require("./routes/index"); //making a custom module that will help us route our project
 const about = require("./routes/about");
 
-// app.get("/" , (req, res) => {
-//     res.end("server is running");
-// })
+app.engine("handlebars" , exphbs({
+    defaultLayout: "main"//look inside of our views folder, layout folder, and find the file called MAIN
+}));
+
+app.set("view engine" , "handlebars");
+
+app.use(express.static(path.join(__dirname, "public")))
 
 app.use("/" , home);
 app.use("/about" , about) //when /about is called, use the about variable
