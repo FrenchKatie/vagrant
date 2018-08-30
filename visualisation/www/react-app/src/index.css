@@ -7,3 +7,10 @@ form{
 ul{
     margin-top: 2em;
 }
+.jumbodark{
+    background-color: black;
+    color: white;
+}
+.jumbodark ul li{
+    color: #2c3e50;
+}
